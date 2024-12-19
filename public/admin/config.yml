@@ -1,0 +1,22 @@
+# public/admin/config.yml
+backend:
+  name: github
+  repo: fthisilak # Bunu kendi GitHub bilgilerinizle değiştirin
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
+      - {label: "Açıklama", name: "description", widget: "text"}
+      - {label: "Öne Çıkan Görsel", name: "featuredImage", widget: "image"}
+      - {label: "İçerik", name: "body", widget: "markdown"}
+      - {label: "Etiketler", name: "tags", widget: "list"}
