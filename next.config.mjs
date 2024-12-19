@@ -2,12 +2,12 @@
 const nextConfig = {
     output: 'export',
     images: {
-      unoptimized: true,
+      unoptimized: true
     },
     eslint: {
-      // Geliştirme sırasında build'i engellemesin
       ignoreDuringBuilds: true
-    }
+    },
+    trailingSlash: true
   };
   
   export default nextConfig;
